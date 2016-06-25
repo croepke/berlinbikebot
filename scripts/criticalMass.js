@@ -14,12 +14,12 @@ var nextLastFridayOfMonth = function(startDate) {
 }
 
 var formatNicely = function(cmDate) {
-    return "Die nächste Critical Mass ist am " + cmDate.getDate() + "." + cmDate.getMonth() + ". um 20 Uhr";
+    return "Die nächste Critical Mass ist am " + cmDate.getDate() + "." + (cmDate.getMonth() + 1) + ". um 20 Uhr";
 }
 
 module.exports = function(robot) {
     var responseFunction = function(response) {
-        response.send(formatNicely(nextLastFridayOfMonth(new Date())))
+        response.send(formatNicely(nextLastFridayOfMonth(new Date())));
     }
 
     robot.hear(/critical mass/ig, responseFunction);
