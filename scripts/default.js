@@ -1,6 +1,6 @@
 module.exports = function(robot) {
 	robot.hear(/guten morgen|hallo/gi, function(res){
-		res.send("Guten Morgen du schöner Fahrradfahrer!");
+		res.send("Guten Morgen du schöne*r Fahrradfahrer*in!");
 		setTimeout(function(){
 			robot.emit('telegram:invoke', 'sendSticker', { chat_id: 89109672, sticker: 'BQADAgADPQADyIsGAAHaVWyyLugSFAI' }, function (error, response) {
 	            console.log(error);
