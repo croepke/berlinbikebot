@@ -34,7 +34,7 @@ module.exports = function(robot) {
 	robot.hear(/tschüssi/gi, function(res){
 		res.send("#cyclehackberlin #betteronabike");
 		setTimeout(function(){
-			res.send("we \u{1F6B2} berlin!");
+			res.send("we bike berlin!");
         }, 1000);
 	});
 }
